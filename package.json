@@ -1,0 +1,14 @@
+{
+  "name": "Empty",
+  "version": "0.0.1",
+  "private": "true",
+  "devDependencies": {
+    "grunt": "*",
+	  "grunt-contrib-copy": "*",
+	  "grunt-contrib-watch": "*",
+	  "grunt-contrib-coffee": "*",
+	  "grunt-contrib-clean": "*",
+	  "grunt-contrib-sass": "*",
+	  "grunt-contrib-compass": "*"
+  }
+}
