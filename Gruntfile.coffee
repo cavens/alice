@@ -10,10 +10,10 @@ module.exports = (grunt) ->
 
 	grunt.initConfig
 		copy:
-			partials:
+			static:
 				files: [
 					expand: true
-					cwd: 'html/'
+					cwd: 'static/'
 					src: ['**', '.htaccess']
 					dest: 'dist/'
 				]
@@ -29,7 +29,7 @@ module.exports = (grunt) ->
 				options:
 					sassDir: 'sass'
 					cssDir: 'dist/css'
-					fontsDir: 'dist/other'
+					fontsDir: 'dist/css/fonts'
 					debugInfo: true
 					trace: true
 					force: true
@@ -64,8 +64,8 @@ module.exports = (grunt) ->
 			tmp: ['tmp/']
 		watch:
 			html:
-				files: ['sass/**/*']
-
+				files: ['static/**/*']
+				tasks: ['copy:static']
 			js:
 				files: [
 					'js/**/*.coffee'
@@ -80,7 +80,7 @@ module.exports = (grunt) ->
 
 		grunt.registerTask 'dev', [
 			'copy:vendor'
-			'copy:partials'
+			'copy:static'
 			'compass:dev'
 			'coffee:dev'
 			'watch'
@@ -88,7 +88,7 @@ module.exports = (grunt) ->
 		grunt.registerTask 'prod', [
 			'clean'
 			'copy:vendor'
-			'copy:partials'
+			'copy:static'
 			'compass:prod'
 			'coffee:prod'
 		]
