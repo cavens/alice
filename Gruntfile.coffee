@@ -10,6 +10,13 @@ module.exports = (grunt) ->
 
 	grunt.initConfig
 		copy:
+			partials:
+				files: [
+					expand: true
+					cwd: 'html/'
+					src: ['**', '.htaccess']
+					dest: 'dist/'
+				]
 			vendor:
 				files: [
 					expand: true
@@ -56,6 +63,9 @@ module.exports = (grunt) ->
 			dist: ['dist/']
 			tmp: ['tmp/']
 		watch:
+			html:
+				files: ['sass/**/*']
+
 			js:
 				files: [
 					'js/**/*.coffee'
@@ -70,6 +80,7 @@ module.exports = (grunt) ->
 
 		grunt.registerTask 'dev', [
 			'copy:vendor'
+			'copy:partials'
 			'compass:dev'
 			'coffee:dev'
 			'watch'
@@ -77,6 +88,7 @@ module.exports = (grunt) ->
 		grunt.registerTask 'prod', [
 			'clean'
 			'copy:vendor'
+			'copy:partials'
 			'compass:prod'
 			'coffee:prod'
 		]
