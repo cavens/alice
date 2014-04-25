@@ -2,6 +2,4 @@
 .sass-cache
 dist
 tmp
-node_modules
-gruntprops.json
 .DS_Store
