@@ -8,17 +8,24 @@ html
 		.wrapper
 			width: 830px
 			margin: 0 auto
+			//
+			// Header
+			//
 			.main-header
 				padding: 60px 0
 				text-align: center
 				img
 					width: 68px
 					height: 68px
+			//
+			// Banner
+			//
 			.main-banner
 				background: #e1cfe9
 				border: 1px solid #d2bedb
 				padding-top: 140px
 				position: relative
+				margin-bottom: 54px
 				@include box-shadow(0 0 60px rgba(208, 34, 106, .07))
 				& > img
 					position: absolute
@@ -67,3 +74,46 @@ html
 								right: -1px
 								margin-top: -16px
 								background: url("../images/banner-text-dots.png") no-repeat 0 0 transparent
+			//
+			// Reserve
+			//
+			.main-reserve
+				@import "compass/utilities/general/clearfix"
+				& > div
+					text-align: center
+					width: 276px
+					float: left
+					color: $baseColor
+					h3
+						font-size: 2.5em
+						line-height: 1.2em
+						text-transform: uppercase
+						font-weight: normal
+					b, i
+						line-height: 1.2em
+						text-transform: none
+					b
+						font-family: $Segoe-Bold
+						text-transform: uppercase
+					i
+						display: block
+						font-family: $Segoe-Italic
+						margin-bottom: 27px
+					a
+						display: block
+						color: $baseColor
+						border: 1px solid #d4bddf
+						text-decoration: none
+						text-transform: uppercase
+						padding: 21px 0 20px
+						@include transition(all .3s)
+						&:hover
+							color: #fff
+							background: $buttonColor
+							border-color: $buttonColor
+						b
+							font-family: $Segoe-Bold
+					&:first-child + div
+						a
+							border-left: none
+							border-right: none
