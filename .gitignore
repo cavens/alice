@@ -2,4 +2,5 @@
 .sass-cache
 dist
 tmp
+node_modules
 .DS_Store
