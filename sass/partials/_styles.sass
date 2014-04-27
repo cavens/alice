@@ -69,7 +69,6 @@
 	// Reserve
 	//
 	.main-reserve
-		@include clearfix()
 		margin-bottom: 43px
 		& > div
 			text-align: center
@@ -128,8 +127,8 @@
 						border-left: 1px solid #d4bddf
 				& + div
 					a
-						border-left: none
-						border-right: none
+						border-left-color: transparent
+						border-right-color: transparent
 				& + div + .disabled
 					a
 						border-left: 1px solid #d4bddf
@@ -150,3 +149,66 @@
 			margin: 0 auto 15px
 		& > span
 			display: block
+	//
+	// Team
+	//
+	.main-team
+		padding: 45px 0 50px
+		border-bottom: 1px dotted $baseColor
+		& > div
+			float: left
+			width: 30%
+			&:first-child + div
+				margin: 0 5%
+			img
+				width: 69px
+				border: 3px solid #fff
+				display: block
+				margin: 0 auto 15px
+				@include border-radius(40px)
+				&.no-border
+					border-color: transparent
+			span
+				display: block
+				text-align: center
+				margin-bottom: 45px
+			p
+				text-transform: uppercase
+				line-height: 1.5em
+				a
+					text-decoration: none
+					color: $baseColor
+					&:hover
+						text-decoration: underline
+	//
+	// Sponsored
+	//
+	.main-sponsored
+		text-align: center
+		padding: 45px 0 50px
+		border-bottom: 1px dotted $baseColor
+		h5
+			text-transform: uppercase
+			margin-bottom: 25px
+		img
+			width: 83px
+			margin: 0 10px
+	//
+	// Presented by
+	//
+	.main-presented_by
+		text-align: center
+		padding: 45px 0 50px
+		h5
+			text-transform: uppercase
+			margin-bottom: 17px
+		.button
+			background: $buttonColor
+			font-family: $Segoe
+			font-size: 2.286em
+			color: #fff
+			margin: 0 auto
+			padding: 14px 0
+			&:hover
+				background: #fff
+				color: $buttonColor
