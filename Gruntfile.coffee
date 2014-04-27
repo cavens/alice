@@ -35,13 +35,15 @@ module.exports = (grunt) ->
 					force: true
 					relativeAssets: true
 			prod:
-				src: 'sass'
-				dest: 'dist/css'
-				outputstyle: 'compressed'
-				linecomments: false
-				forcecompile: true
-				debugsass: false
-				relativeassets: true
+				options:
+					sassDir: 'sass'
+					cssDir: 'dist/css'
+					fontsDir: 'dist/css/fonts'
+					outputStyle: 'compressed'
+					debugInfo: false
+					trace: false
+					force: false
+					relativeAssets: false
 		coffee:
 			dev:
 				options:
