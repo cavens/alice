@@ -87,10 +87,11 @@ module.exports = (grunt) ->
 			'coffee:dev'
 			'watch'
 		]
-		grunt.registerTask 'prod', [
+		grunt.registerTask 'production', [
 			'clean'
 			'copy:vendor'
 			'copy:static'
 			'compass:prod'
 			'coffee:prod'
 		]
+		grunt.registerTask 'heroku', ['production']
