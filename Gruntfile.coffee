@@ -15,21 +15,21 @@ module.exports = (grunt) ->
 					expand: true
 					cwd: 'static/'
 					src: ['**', '.htaccess']
-					dest: 'dist/'
+					dest: 'public/'
 				]
 			vendor:
 				files: [
 					expand: true
 					cwd: 'js/vendor/'
 					src: ['**', '.htaccess'],
-					dest: 'dist/js/'
+					dest: 'public/js/'
 				]
 		compass:
 			dev:
 				options:
 					sassDir: 'sass'
-					cssDir: 'dist/css'
-					fontsDir: 'dist/css/fonts'
+					cssDir: 'public/css'
+					fontsDir: 'public/css/fonts'
 					debugInfo: true
 					trace: true
 					force: true
@@ -37,8 +37,8 @@ module.exports = (grunt) ->
 			prod:
 				options:
 					sassDir: 'sass'
-					cssDir: 'dist/css'
-					fontsDir: 'dist/css/fonts'
+					cssDir: 'public/css'
+					fontsDir: 'public/css/fonts'
 					outputStyle: 'compressed'
 					debugInfo: false
 					trace: false
@@ -48,7 +48,7 @@ module.exports = (grunt) ->
 			dev:
 				options:
 					sourceMap: true
-				dest: 'dist/js/app.js'
+				dest: 'public/js/app.js'
 				src: [
 					'js/**/*.coffee'
 				]
@@ -56,13 +56,13 @@ module.exports = (grunt) ->
 			prod:
 				options:
 					sourceMap: false
-				dest: 'dist/js/app.js'
+				dest: 'public/js/app.js'
 				src: [
 					'js/**/*.coffee'
 				]
 				filter: 'isFile'
 		clean:
-			dist: ['dist/']
+			public: ['public/']
 			tmp: ['tmp/']
 		watch:
 			html:

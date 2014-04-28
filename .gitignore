@@ -1,6 +1,6 @@
 .idea
 .sass-cache
-dist
+public
 tmp
 node_modules
 .DS_Store
