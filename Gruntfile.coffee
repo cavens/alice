@@ -38,7 +38,7 @@ module.exports = (grunt) ->
 				options:
 					sassDir: 'sass'
 					cssDir: 'public/css'
-					fontsDir: 'public/css/fonts'
+					fontsDir: 'alice/css/fonts'
 					outputStyle: 'compressed'
 					debugInfo: false
 					trace: false
